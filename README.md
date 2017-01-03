@@ -8,7 +8,7 @@ This repository contains the code samples for my book "Getting started with Angu
 
 ```bash
 git clone --depth 1 https://github.com/mgechev/getting-started-with-angular.git
-cd switching-to-angular2
+cd getting-started-with-angular
 npm install
 npm start
 ```
