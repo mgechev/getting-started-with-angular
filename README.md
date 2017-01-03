@@ -7,7 +7,7 @@ This repository contains the code samples for my book "Getting started with Angu
 **Note** that this seed project requires node v4.x.x or higher and npm 2.14.7.
 
 ```bash
-git clone --depth 1 https://github.com/mgechev/switching-to-angular2.git
+git clone --depth 1 https://github.com/mgechev/getting-started-with-angular.git
 cd switching-to-angular2
 npm install
 npm start
