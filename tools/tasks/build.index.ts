@@ -9,13 +9,13 @@ export = function buildIndexDev(gulp, plugins) {
       .pipe(inject())
       .pipe(plugins.template(
         require('merge')(templateLocals(), {
-          TITLE: 'Switching to Angular 2',
+          TITLE: 'Getting started with Angular',
           INIT: `
 <script>
   System.config(${JSON.stringify(SYSTEM_CONFIG)});
   System.import("./app")
     .catch(function (e) {
-      console.log("Report this error to https://github.com/mgechev/switching-to-angular2/issues", e);
+      console.log("Report this error to https://github.com/mgechev/getting-started-with-angular/issues", e);
     });
 </script>`
         })
