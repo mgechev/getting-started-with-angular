@@ -44,7 +44,7 @@
     <label class="control-label" for="technologyInput">Technology</label>
     <div>
       <select class="form-control" formControlName="technology">
-          <option *ngFor="let t of technologies" [value]="t">{{t}}</option>
+          <option *ngFor="let technology of technologies" [value]="technology">{{technology}}</option>
       </select>
       <control-errors control="technology"
         [errors]="{
