@@ -7,3 +7,4 @@ function MyComponent() {
 }
 
 new MyComponent(); // 43 in 100ms.
+
