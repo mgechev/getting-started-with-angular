@@ -6,7 +6,7 @@ import {
 const VALIDATOR = new OpaqueToken('validator');
 
 interface EmployeeValidator {
-  (person: Employee): boolean;
+  (person: Employee): string;
 };
 
 class Employee {
@@ -20,16 +20,24 @@ class Employee {
 }
 
 let injector = ReflectiveInjector.resolveAndCreate([
-  { provide: VALIDATOR, multi: true, useValue: (person: Employee) => {
-    if (!person.name) {
-      return 'The name is required';
+  {
+    provide: VALIDATOR,
+    multi: true,
+    useValue: (person: Employee) => {
+      if (!person.name) {
+        return 'The name is required';
+      }
     }
-  }},
-  { provide: VALIDATOR, multi: true, useValue: (person: Employee) => {
-    if (!person.name || person.name.length < 1) {
-      return 'The name should be more than 1 symbol long';
+  },
+  {
+    provide: VALIDATOR,
+    multi: true,
+    useValue: (person: Employee) => {
+      if (!person.name || person.name.length < 1) {
+        return 'The name should be more than 1 symbol long';
+      }
     }
-  }},
+  },
   Employee
 ]);
 
