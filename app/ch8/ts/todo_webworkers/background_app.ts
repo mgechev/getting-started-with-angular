@@ -99,7 +99,7 @@ export class TodoApp {
 }
 
 @NgModule({
-  imports: [BrowserModule, WorkerAppModule, FormsModule],
+  imports: [WorkerAppModule, FormsModule],
   declarations: [TodoList, InputBox, TodoApp],
   bootstrap: [TodoApp]
 })
